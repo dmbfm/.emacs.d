@@ -14,7 +14,7 @@
 (require 'magit)
 (require 'magit-gitflow)
 (require 'drag-stuff)
-
+(require 'projectile)
 
 (drag-stuff-mode t)
 ;(drag-stuff-define-keys)
@@ -24,11 +24,10 @@
   (interactive)
   (end-of-line)
   (newline-and-indent))
-
 (global-set-key (kbd "<S-return>") 'end-of-line-and-indented-new-line)
 
-(global-set-key (kbd "C-b") 'ido-switch-buffer)
-(global-set-key (kbd "C-f") 'ido-find-file)
+;(global-set-key (kbd "C-b") 'ido-switch-buffer)
+;(global-set-key (kbd "C-f") 'ido-find-file)
 (global-set-key (kbd "M-<down>") 'drag-stuff-down)
 (global-set-key (kbd "M-<up>") 'drag-stuff-up)
 
@@ -49,26 +48,46 @@
 
 (ido-mode t)
 (global-display-line-numbers-mode)
+(ido-mode t)
 (winner-mode t)
-(global-subword-mode t)
-(global-superword-mode t)
+;; (global-subword-mode t)
+;; (global-superword-mode t)
 (electric-pair-mode t)
-
 (setq visible-bell 1)
 (tool-bar-mode -1)
 
-(global-set-key (kbd "M-o") 'other-window)
-(global-set-key (kbd "C-c o") 'occur)
+
+;; (global-set-key (kbd "M-o") 'other-window)
+;; (global-set-key (kbd "C-c o") 'occur)
 (global-set-key (kbd "M-i") 'imenu)
+(global-set-key (kbd "M-<right>") (lambda () (interactive) (other-window 1)))
+(global-set-key (kbd "M-<left>") (lambda () (interactive) (other-window -1)))
+
+(defun kill-whole-word ()
+  (interactive)
+  (backward-kill-word 1)
+  (kill-word 1))
+
+(global-set-key (kbd "C-c w") 'kill-whole-word)
+
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 
 ;;(split-window-horizontally)
+(projectile-mode +1)
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (drag-stuff magit-gitflow magit darcula-theme))))
+ '(package-selected-packages
+   (quote
+    (projectile expand-region drag-stuff magit-gitflow magit darcula-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
