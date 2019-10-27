@@ -55,7 +55,8 @@
 (electric-pair-mode t)
 (setq visible-bell 1)
 (tool-bar-mode -1)
-
+(menu-bar-mode -1)
+(toggle-scroll-bar -1)
 
 ;; (global-set-key (kbd "M-o") 'other-window)
 ;; (global-set-key (kbd "C-c o") 'occur)
@@ -69,6 +70,10 @@
   (kill-word 1))
 
 (global-set-key (kbd "C-c w") 'kill-whole-word)
+
+
+(global-set-key (kbd "C-<f5>") (lambda () (interactive) (ff-find-other-file 1 1)))
+(global-set-key (kbd "C-<f4>") 'ff-find-other-file)
 
 
 (require 'expand-region)
@@ -87,7 +92,13 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile expand-region drag-stuff magit-gitflow magit darcula-theme))))
+    (projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
+ '(safe-local-variable-values
+   (quote
+    ((projectile-project-compilation-cmd . "build.bat")
+     (projectile-enable-caching . t)
+     (projectile-project-compilation-dir . "")
+     (projectile-project-name . "handmade-hero")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
