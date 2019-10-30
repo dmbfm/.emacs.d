@@ -89,6 +89,10 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
+(when (eq system-type 'windows-nt)
+  (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
+  (set-face-attribute 'default t :font "Consolas-10" ))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
