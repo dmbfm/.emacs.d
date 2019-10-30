@@ -74,7 +74,7 @@
   (kill-word 1))
 
 (global-set-key (kbd "C-c w") 'kill-whole-word)
-
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 (global-set-key (kbd "C-<f5>") (lambda () (interactive) (ff-find-other-file 1 1)))
 (global-set-key (kbd "C-<f4>") 'ff-find-other-file)
@@ -92,6 +92,9 @@
 (when (eq system-type 'windows-nt)
   (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
   (set-face-attribute 'default t :font "Consolas-10" ))
+
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
