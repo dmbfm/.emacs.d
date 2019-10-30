@@ -16,6 +16,9 @@
 (require 'drag-stuff)
 (require 'projectile)
 
+(require 'hl-todo)
+(add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
+
 (drag-stuff-mode t)
 ;(drag-stuff-define-keys)
 
@@ -57,6 +60,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (toggle-scroll-bar -1)
+(setq inhibit-splash-screen 1)
 
 ;; (global-set-key (kbd "M-o") 'other-window)
 ;; (global-set-key (kbd "C-c o") 'occur)
@@ -92,7 +96,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
+    (hl-todo projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
  '(safe-local-variable-values
    (quote
     ((projectile-project-compilation-cmd . "build.bat")
