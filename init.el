@@ -15,6 +15,8 @@
 (require 'magit-gitflow)
 (require 'drag-stuff)
 (require 'projectile)
+(require 'csharp-mode)
+(require 'markdown-mode)
 
 (require 'hl-todo)
 (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
@@ -103,7 +105,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (hl-todo projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
+    (markdown-mode csharp-mode hl-todo projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
  '(safe-local-variable-values
    (quote
     ((projectile-project-compilation-cmd . "build.bat")
