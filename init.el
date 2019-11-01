@@ -55,6 +55,7 @@
 (global-display-line-numbers-mode)
 (ido-mode t)
 (winner-mode t)
+(hl-todo-mode t)
 ;; (global-subword-mode t)
 ;; (global-superword-mode t)
 (electric-pair-mode t)
