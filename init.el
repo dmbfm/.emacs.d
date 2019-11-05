@@ -82,7 +82,6 @@
 (global-set-key (kbd "C-<f5>") (lambda () (interactive) (ff-find-other-file 1 1)))
 (global-set-key (kbd "C-<f4>") 'ff-find-other-file)
 
-
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
@@ -98,6 +97,15 @@
 
 (setq c-default-style "linux"
       c-basic-offset 4)
+
+(defun my-projectile-run-project (&optional prompt)
+  (interactive "P")
+  (let ((compilation-read-command
+         (or (not (projectile-run-command (projectile-compilation-dir)))
+             prompt)))
+    (projectile-run-project prompt)))
+
+(global-set-key (kbd "C-c C-d") 'my-projectile-run-project)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
