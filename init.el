@@ -99,6 +99,8 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+(add-hook 'csharp-mode-hook (lambda () (c-set-style "c#")))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
