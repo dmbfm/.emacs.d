@@ -107,6 +107,8 @@
 
 (global-set-key (kbd "C-c C-d") 'my-projectile-run-project)
 
+(add-hook 'csharp-mode-hook (lambda () (c-set-style "c#")))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
