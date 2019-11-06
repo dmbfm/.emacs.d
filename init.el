@@ -11,14 +11,21 @@
 (setq apropos-sort-by-scores t)
 
 (require 'darcula-theme)
+(require 'solarized-theme)
 (require 'magit)
 (require 'magit-gitflow)
 (require 'drag-stuff)
 (require 'projectile)
 (require 'csharp-mode)
 (require 'markdown-mode)
-
 (require 'hl-todo)
+(require 'editorconfig)
+
+(editorconfig-mode t)
+
+; (add-hook 'after-init-hook (lambda () (load-theme 'solarized-light)))
+
+
 (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
 
 (drag-stuff-mode t)
@@ -47,9 +54,15 @@
   )
 (global-set-key (kbd "C-c d") 'duplicate-line)	
 
-(setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
 (setq create-lockfiles nil)
+(setq make-backup-files nil)
+(setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
+(global-hl-line-mode t)
 
 (ido-mode t)
 (global-display-line-numbers-mode)
@@ -91,9 +104,14 @@
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-(when (eq system-type 'windows-nt)
-  (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
-  (set-face-attribute 'default t :font "Consolas-10" ))
+(if (eq system-type 'windows-nt)
+    (progn
+      (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
+      (set-face-attribute 'default t :font "Consolas-10" ))
+  (progn
+    (add-to-list 'default-frame-alist '(font . "Fira Mono-10"))
+    (set-face-attribute 'default t :font "Fira Mono-10")
+    ))
 
 (setq c-default-style "linux"
       c-basic-offset 4)
@@ -109,23 +127,43 @@
 
 (add-hook 'csharp-mode-hook (lambda () (c-set-style "c#")))
 
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(custom-safe-themes
+;;    (quote
+;;     ("14f13fee1792f44c448df33e3d3a03ce9adbf1b47da8be490f604ac7ae6659b9" "9271c0ad73ef29af016032376d36e8aed4e89eff17908c0b578c33e54dfa1da1" "41c8c11f649ba2832347fe16fe85cf66dafe5213ff4d659182e25378f9cfc183" default)))
+;;  '(package-selected-packages
+;;    (quote
+;;     (solarized-theme markdown-mode csharp-mode hl-todo projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
+;;  '(safe-local-variable-values
+;;    (quote
+;;     ((projectile-project-compilation-cmd . "build.bat")
+;;      (projectile-enable-caching . t)
+;;      (projectile-project-compilation-dir . "")
+;;      (projectile-project-name . "handmade-hero")))))
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:inherit nil :stipple nil :background "#2B2B2B" :foreground "#a9b7c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "CTDB" :family "Fira Mono")))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("85d1dbf2fc0e5d30f236712b831fb24faf6052f3114964fdeadede8e1b329832" "41c8c11f649ba2832347fe16fe85cf66dafe5213ff4d659182e25378f9cfc183" "5dbdb4a71a0e834318ae868143bb4329be492dd04bdf8b398fb103ba1b8c681a" "9271c0ad73ef29af016032376d36e8aed4e89eff17908c0b578c33e54dfa1da1" default)))
  '(package-selected-packages
    (quote
-    (markdown-mode csharp-mode hl-todo projectile expand-region drag-stuff magit-gitflow magit darcula-theme)))
- '(safe-local-variable-values
-   (quote
-    ((projectile-project-compilation-cmd . "build.bat")
-     (projectile-enable-caching . t)
-     (projectile-project-compilation-dir . "")
-     (projectile-project-name . "handmade-hero")))))
+    (editorconfig leuven-theme solarized-theme projectile markdown-mode magit-gitflow hl-todo expand-region drag-stuff darcula-theme csharp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#2B2B2B" :foreground "#a9b7c6" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "CTDB" :family "Fira Mono")))))
+ )
