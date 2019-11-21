@@ -20,6 +20,8 @@
 (require 'markdown-mode)
 (require 'hl-todo)
 (require 'editorconfig)
+(require 'web-mode)
+(require 'rjsx-mode)
 
 (editorconfig-mode t)
 
@@ -126,6 +128,9 @@
 (global-set-key (kbd "C-c C-d") 'my-projectile-run-project)
 
 (add-hook 'csharp-mode-hook (lambda () (c-set-style "c#")))
+;(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
 
 ;; (custom-set-variables
 ;;  ;; custom-set-variables was added by Custom.
@@ -160,7 +165,7 @@
     ("85d1dbf2fc0e5d30f236712b831fb24faf6052f3114964fdeadede8e1b329832" "41c8c11f649ba2832347fe16fe85cf66dafe5213ff4d659182e25378f9cfc183" "5dbdb4a71a0e834318ae868143bb4329be492dd04bdf8b398fb103ba1b8c681a" "9271c0ad73ef29af016032376d36e8aed4e89eff17908c0b578c33e54dfa1da1" default)))
  '(package-selected-packages
    (quote
-    (editorconfig leuven-theme solarized-theme projectile markdown-mode magit-gitflow hl-todo expand-region drag-stuff darcula-theme csharp-mode))))
+    (rjsx-mode web-mode editorconfig leuven-theme solarized-theme projectile markdown-mode magit-gitflow hl-todo expand-region drag-stuff darcula-theme csharp-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
