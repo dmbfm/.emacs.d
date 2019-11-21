@@ -1,0 +1,10 @@
+* Emacs notes, commands and packages
+
+** Packages
+- Web mode docs: http://web-mode.org/
+
+** Commands
+*** Bookmakarks
+- <C-x r m>: Set bookmark
+- <C-x r b>: Jump to bookmark
+- <C-x r l>: List bookmarks
