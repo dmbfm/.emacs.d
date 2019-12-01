@@ -44,6 +44,7 @@
 ;(global-set-key (kbd "C-f") 'ido-find-file)
 (global-set-key (kbd "M-<down>") 'drag-stuff-down)
 (global-set-key (kbd "M-<up>") 'drag-stuff-up)
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 (defun duplicate-line()
   (interactive)
@@ -162,10 +163,16 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("85d1dbf2fc0e5d30f236712b831fb24faf6052f3114964fdeadede8e1b329832" "41c8c11f649ba2832347fe16fe85cf66dafe5213ff4d659182e25378f9cfc183" "5dbdb4a71a0e834318ae868143bb4329be492dd04bdf8b398fb103ba1b8c681a" "9271c0ad73ef29af016032376d36e8aed4e89eff17908c0b578c33e54dfa1da1" default)))
+    ("9f588304adcabf0c6d7669551dbf3b9e38c15e22ffed87f8653f73a12b158872" "bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "4ec612fbc6c4ebfee32c60b68a5010ced871952b8a885482a763268a74f949a4" "216ec77359be3dd95dc0988f71cfe4c2661aac03dca3236e019ef40358689fc7" "1bd68bb3fff9187000a48aac28682c11558d94be49ef13cd901c0fc519d74c67" "c3e610e0b6f0a28b4d88c4a76fd2b7058fa2511ec48f1ac7388dd4e84e5ef01e" "85d1dbf2fc0e5d30f236712b831fb24faf6052f3114964fdeadede8e1b329832" "41c8c11f649ba2832347fe16fe85cf66dafe5213ff4d659182e25378f9cfc183" "5dbdb4a71a0e834318ae868143bb4329be492dd04bdf8b398fb103ba1b8c681a" "9271c0ad73ef29af016032376d36e8aed4e89eff17908c0b578c33e54dfa1da1" default)))
  '(package-selected-packages
    (quote
-    (rjsx-mode web-mode editorconfig leuven-theme solarized-theme projectile markdown-mode magit-gitflow hl-todo expand-region drag-stuff darcula-theme csharp-mode))))
+    (color-theme-sanityinc-tomorrow rjsx-mode web-mode editorconfig leuven-theme solarized-theme projectile markdown-mode magit-gitflow hl-todo expand-region drag-stuff darcula-theme csharp-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((projectile-project-compilation-cmd . "build.bat")
+     (projectile-enable-caching . t)
+     (projectile-project-compilation-dir . "")
+     (projectile-project-name . "handmade-hero")))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
