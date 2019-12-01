@@ -8,3 +8,6 @@
 - <C-x r m>: Set bookmark
 - <C-x r b>: Jump to bookmark
 - <C-x r l>: List bookmarks
+*** Killing
+- <M-SPC>: Kill white space, leaving only one between words.
+- <M-\>: Delete horizontal space; kill white space, leaving no space between words.
