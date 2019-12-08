@@ -43,7 +43,7 @@
 (editorconfig-mode t)
 (global-hl-line-mode t)
 (load-theme 'leuven t)
-
+(setq-default fill-column 90)
 ;; (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
 
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'leuven)))
@@ -203,3 +203,6 @@
 (add-hook 'dired-mode-hook 'org-download-enable)
 
 (setq org-download-image-dir df-deft-notes-images-dir)
+
+(global-set-key (kbd "C-c l") 'org-store-link)
+(setq org-link-search-must-match-exact-headline nil)
