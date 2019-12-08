@@ -11,6 +11,12 @@
 (setq apropos-sort-by-scores t)
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
+
+(setq local-vars-file (concat user-emacs-directory "vars.el"))
+(when (file-exists-p local-vars-file)
+  (load local-vars-file))
+(if (boundp 'df-local-dropbox-path) (setq df-dropbox-path df-local-dropbox-path) (setq df-dropbox-path "~/Dropbox"))
+
 (when (file-exists-p custom-file)
   (load custom-file))
       
@@ -31,9 +37,13 @@
 ;; (require 'tide)
 (require 'company)
 (require 'add-node-modules-path)
+(require 'deft)
+(require 'org-download)
 
 (editorconfig-mode t)
 (global-hl-line-mode t)
+(load-theme 'leuven t)
+
 ;; (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
 
 ;; (add-hook 'after-init-hook (lambda () (load-theme 'leuven)))
@@ -120,7 +130,6 @@
 ;;(if (eq system-type 'gnu/linux) (setq tide-node-executable "/home/dmbfm/.nvm/versions/node/v12.13.1/bin/node"))
 ;; (if (eq system-type 'gnu/linux)  (setq exec-path (append exec-path '("/home/dmbfm/.nvm/versions/node/v12.13.1/bin"))))
 
-
 (if (eq system-type 'windows-nt)
     (progn
       (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
@@ -177,3 +186,20 @@
   ;; (add-hook 'before-save-hook #'tide-format-before-save)
   ;; (add-hook 'typescript-mode-hook #'my-setup-tide-mode))
 
+
+(setq deft-extensions '("org" "txt"))
+(setq deft-default-extension "org")
+(setq df-deft-notes-dir (concat (file-name-as-directory df-dropbox-path) "notes"))
+(setq df-deft-notes-images-dir (concat (file-name-as-directory df-deft-notes-dir) "images"))
+(setq deft-directory df-deft-notes-dir)
+(global-set-key [f8] 'deft)
+(setq deft-use-filename-as-title nil)
+(setq deft-use-filter-string-for-filename 1)
+(setq deft-file-naming-rules
+      '((noslash . "-")
+        (nospace . "-")
+        (case-fn . downcase)))
+
+(add-hook 'dired-mode-hook 'org-download-enable)
+
+(setq org-download-image-dir df-deft-notes-images-dir)
