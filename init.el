@@ -221,3 +221,16 @@
 	try-complete-lisp-symbol))
 
 (global-set-key (kbd "M-]") 'delete-indentation)
+
+(setq org-log-done t)
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE")
+	(sequence "TODO(t)" "REPORTED(r)" "NEEDS_INVESTIGATION(n)" "IN_PROGRESS(p)" "|" "DONE(d)")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" :foreground "red" :weight bold)
+	("REPORTED" :foreground "orange" :weight bold)
+	("NEEDS_INVESTIGATION" :foreground "salmon1" :weight bold)
+	("IN_PROGRESS" :foreground "SeaGreen3" :weight bold)
+	("DONE" :foreground "DodgerBlue1" :weight bold)
+	))
