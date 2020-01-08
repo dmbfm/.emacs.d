@@ -19,7 +19,12 @@
 
 (when (file-exists-p custom-file)
   (load custom-file))
-      
+
+ (setq df-default-font
+      (cond ((boundp 'df-local-default-font) df-local-default-font)
+	    ((eq system-type 'windows-nt) "Consolas-10")
+	    ("Fira Mono-10")))
+
 (require 'darcula-theme)
 (require 'solarized-theme)
 (require 'magit)
@@ -130,14 +135,19 @@
 ;;(if (eq system-type 'gnu/linux) (setq tide-node-executable "/home/dmbfm/.nvm/versions/node/v12.13.1/bin/node"))
 ;; (if (eq system-type 'gnu/linux)  (setq exec-path (append exec-path '("/home/dmbfm/.nvm/versions/node/v12.13.1/bin"))))
 
-(if (eq system-type 'windows-nt)
-    (progn
-      (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
-      (set-face-attribute 'default t :font "Consolas-10" ))
-  (progn
-    (add-to-list 'default-frame-alist '(font . "Fira Mono-10"))
-    (set-face-attribute 'default t :font "Fira Mono-10")
-    ))
+
+(add-to-list 'default-frame-alist '(font . df-default-font))
+(set-face-attribute 'default t :font df-default-font)
+
+;; Change to a variable in vars
+;; (if (eq system-type 'windows-nt)
+;;     (progn
+;;       (add-to-list 'default-frame-alist '(font . "Consolas-10" ))
+;;       (set-face-attribute 'default t :font "Consolas-10" ))
+;;   (progn
+;;     (add-to-list 'default-frame-alist '(font . "Fira Mono-10"))
+;;     (set-face-attribute 'default t :font "Fira Mono-10")
+;;     ))
 
 (setq c-default-style "linux"
       c-basic-offset 4)
