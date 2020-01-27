@@ -20,7 +20,7 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
- (setq df-default-font
+(setq df-default-font
       (cond ((boundp 'df-local-default-font) df-local-default-font)
 	    ((eq system-type 'windows-nt) "Consolas-10")
 	    ("Fira Mono-10")))
@@ -44,10 +44,13 @@
 (require 'add-node-modules-path)
 (require 'deft)
 (require 'org-download)
+(require 'shader-mode)
 
 (editorconfig-mode t)
 (global-hl-line-mode t)
-(load-theme 'leuven t)
+;; (load-theme 'leuven t)
+(load-theme 'sanityinc-tomorrow-eighties)
+
 (setq-default fill-column 90)
 ;; (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
 
@@ -126,6 +129,16 @@
 (global-set-key (kbd "C-=") 'er/expand-region)
 
 
+;; HELM
+;; TODO: Configure helm
+(require 'helm-config)
+(helm-mode 1)
+
+(add-hook 'org-mode-hook
+            (lambda () (add-to-list 'helm-completing-read-handlers-alist '(org-set-tags))))
+
+;; END HELM
+
 ;;(split-window-horizontally)
 (projectile-mode +1)
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
@@ -136,7 +149,7 @@
 ;; (if (eq system-type 'gnu/linux)  (setq exec-path (append exec-path '("/home/dmbfm/.nvm/versions/node/v12.13.1/bin"))))
 
 
-(add-to-list 'default-frame-alist '(font . df-default-font))
+(add-to-list 'default-frame-alist `(font ., df-default-font))
 (set-face-attribute 'default t :font df-default-font)
 
 ;; Change to a variable in vars
