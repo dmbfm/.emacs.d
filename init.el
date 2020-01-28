@@ -45,6 +45,8 @@
 (require 'deft)
 (require 'org-download)
 (require 'shader-mode)
+(require 'omnisharp)
+(require 'helm-company)
 
 (editorconfig-mode t)
 (global-hl-line-mode t)
@@ -174,8 +176,24 @@
 
 (global-set-key (kbd "C-c C-d") 'my-projectile-run-project)
 
+
+;; C-SHARP
 (add-hook 'csharp-mode-hook (lambda () (c-set-style "c#")))
-;(add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
+(add-hook 'csharp-mode-hook 'omnisharp-mode)
+(eval-after-load
+ 'company
+ '(add-to-list 'company-backends 'company-omnisharp))
+
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-:") 'helm-company)
+     (define-key company-active-map (kbd "C-:") 'helm-company)))
+
+(add-hook 'csharp-mode-hook #'company-mode)
+
+(setq company-idle-delay nil)
+
+					; (add-to-list 'auto-mode-alist '("\\.jsx?$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
 

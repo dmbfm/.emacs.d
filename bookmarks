@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("emacsnotes.org"
+(("ARLocation.cs"
+ (filename . "c:/Workspace/Projects/unity-ar-gps-location-project/unity-ar-gps-location/Assets/ARLocation/Scripts/ARLocation.cs")
+ (front-context-string . "using UnityEngin")
+ (rear-context-string)
+ (position . 1))
+("emacsnotes.org"
  (filename . "~/.emacs.d/emacsnotes.org")
  (front-context-string . "* Emacs notes, c")
  (rear-context-string)
