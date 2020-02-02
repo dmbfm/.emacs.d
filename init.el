@@ -46,7 +46,9 @@
 (require 'org-download)
 (require 'shader-mode)
 (require 'omnisharp)
-(require 'helm-company)
+(require 'ivy)
+(require 'counsel-projectile)
+;; (require 'helm-company)
 
 (editorconfig-mode t)
 (global-hl-line-mode t)
@@ -134,13 +136,47 @@
 
 ;; HELM
 ;; TODO: Configure helm
-(require 'helm-config)
-(helm-mode 1)
+;; (require 'helm-config)
+;; (helm-mode 1)
 
-(add-hook 'org-mode-hook
-            (lambda () (add-to-list 'helm-completing-read-handlers-alist '(org-set-tags))))
+;; (add-hook 'org-mode-hook
+;; 	  (lambda () (add-to-list 'helm-completing-read-handlers-alist '(org-set-tags))))
+;; (global-set-key [remap execute-extended-command] 'helm-M-x)
+;; (global-set-key [remap find-file] 'helm-find-files)
+;; (global-set-key [remap occur] 'helm-occur)
+;; (global-set-key [remap list-buffers] 'helm-mini)
 
 ;; END HELM
+
+
+
+;; IVY
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
+;; enable this if you want `swiper' to use it
+;; (setq search-default-mode #'char-fold-to-regexp)
+(global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+(counsel-projectile-mode)
+
+;; END IVY
+
 
 ;;(split-window-horizontally)
 (projectile-mode +1)
@@ -185,10 +221,17 @@
  'company
  '(add-to-list 'company-backends 'company-omnisharp))
 
+;; (eval-after-load 'company
+;;   '(progn
+;;      (define-key company-mode-map (kbd "C-:") 'helm-company)
+;;      (define-key company-active-map (kbd "C-:") 'helm-company)))
+
+
 (eval-after-load 'company
   '(progn
-     (define-key company-mode-map (kbd "C-:") 'helm-company)
-     (define-key company-active-map (kbd "C-:") 'helm-company)))
+     (define-key company-mode-map (kbd "C-:") 'counsel-company)
+     (define-key company-active-map (kbd "C-:") 'counsel-company)))
+
 
 (add-hook 'csharp-mode-hook #'company-mode)
 
@@ -279,3 +322,6 @@
 
 (setq org-blank-before-new-entry '((heading) (plain-list-item)))
 
+(setq org-agenda-files `(,df-deft-notes-dir))
+
+(global-set-key (kbd "C-c m")  'magit)

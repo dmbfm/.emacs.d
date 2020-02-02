@@ -10,3 +10,5 @@ server/
 #ido.last#
 custom.el
 vars.el
+projectile.cache*
+recentf*
