@@ -325,3 +325,4 @@
 (setq org-agenda-files `(,df-deft-notes-dir))
 
 (global-set-key (kbd "C-c m")  'magit)
+(global-set-key (kbd "C-c a")  'org-agenda)
