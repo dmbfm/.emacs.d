@@ -326,3 +326,6 @@
 
 (global-set-key (kbd "C-c m")  'magit)
 (global-set-key (kbd "C-c a")  'org-agenda)
+(with-eval-after-load 'org
+  (define-key org-mode-map (kbd "C-c C-q") #'counsel-org-tag))
+
