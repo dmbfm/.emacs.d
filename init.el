@@ -125,7 +125,6 @@
   (kill-word 1))
 
 (global-set-key (kbd "C-c w") 'kill-whole-word)
-(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 (global-set-key (kbd "C-<f5>") (lambda () (interactive) (ff-find-other-file 1 1)))
 (global-set-key (kbd "C-<f4>") 'ff-find-other-file)
@@ -329,3 +328,6 @@
 (with-eval-after-load 'org
   (define-key org-mode-map (kbd "C-c C-q") #'counsel-org-tag))
 
+(global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
+
+(define-key c-mode-base-map (kbd "C-c C-c") 'comment-or-uncomment-region)
