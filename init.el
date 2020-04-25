@@ -331,3 +331,6 @@
 (global-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)
 
 (define-key c-mode-base-map (kbd "C-c C-c") 'comment-or-uncomment-region)
+
+(setq auto-window-vscroll nil)
+(c-set-offset 'case-label '+)
