@@ -413,4 +413,9 @@
   :after treemacs magit
   :ensure t)
 
+(setq auto-window-vscroll nil)
+(c-set-offset 'case-label '+)
 
+(defun my-c-mode-hook ()
+  (c-set-offset 'case-label '+))
+(add-hook 'c-mode-common-hook 'my-c-mode-hook)
