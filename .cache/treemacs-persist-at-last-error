@@ -1,0 +1,13 @@
+# State when last error occurred on 2020-04-20 16:27:17
+# Error was 'Workspace name must be followed by project name' in line '* TEst'
+
+* Default
+** chess-piece-osm
+ - path :: ~/Workspace/Projects/evolutionv/chess-piece-osm
+** chess-pieces-prototype
+ - path :: ~/Workspace/Projects/evolutionv/chess-pieces-prototype
+** vizicities
+ - path :: ~/Workspace/Projects/evolutionv/vizicities
+* OSM Buildings
+* TEst
+* ChessPieces MVP
