@@ -1,0 +1,199 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Apr  9 22:08:54 2020
+;; Desktop file format version 208
+;; Emacs version 26.2
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24207 50982 118195 0) (desktop . "208") "dmbfm@DESKTOP-P2E0EQI" nil nil ((((minibuffer . t) (undecorated) (skip-taskbar) (font-backend uniscribe gdi) (font-parameter . "Fira Code Retina-10") (font . "-outline-Fira Code Retina-normal-normal-normal-mono-27-*-*-*-c-*-iso8859-1") (border-width . 0) (internal-border-width . 0) (right-divider-width . 0) (bottom-divider-width . 0) (vertical-scroll-bars) (horizontal-scroll-bars) (foreground-color . "#cccccc") (background-color . "#2d2d2d") (mouse-color . "black") (border-color . "#515151") (screen-gamma) (line-spacing) (left-fringe . 8) (right-fringe . 8) (no-focus-on-map) (no-accept-focus) (no-special-glyphs) (alpha) (menu-bar-lines . 0) (tool-bar-lines . 0) (height . 65) (title) (icon-type) (auto-raise) (auto-lower) (cursor-type . box) (scroll-bar-width . 0) (scroll-bar-height . 0) (fullscreen . fullboth) (z-group) (visibility . t) (environment "windir=C:\\Windows" "USERPROFILE=C:\\Users\\danie" "USERNAME=dmbfm" "USERDOMAIN_ROAMINGPROFILE=DESKTOP-P2E0EQI" "USERDOMAIN=DESKTOP-P2E0EQI" "TMP=C:\\Users\\danie\\AppData\\Local\\Temp" "TEMP=C:\\Users\\danie\\AppData\\Local\\Temp" "SystemRoot=C:\\Windows" "SystemDrive=C:" "PUBLIC=C:\\Users\\Public" "PSModulePath=%ProgramFiles%\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules" "ProgramW6432=C:\\Program Files" "ProgramFiles(x86)=C:\\Program Files (x86)" "ProgramFiles=C:\\Program Files" "ProgramData=C:\\ProgramData" "PROCESSOR_REVISION=9e0a" "PROCESSOR_LEVEL=6" "PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel" "PROCESSOR_ARCHITECTURE=AMD64" "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" "Path=C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\ProgramData\\chocolatey\\bin;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\chocolatey\\lib\\mpv.install\\tools;;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Calibre2\\;C:\\Program Files\\LLVM\\bin;C:\\Users\\danie\\AppData\\Local\\Microsoft\\WindowsApps" "OS=Windows_NT" "OneDriveConsumer=C:\\Users\\danie\\OneDrive" "OneDrive=C:\\Users\\danie\\OneDrive" "NUMBER_OF_PROCESSORS=12" "LOGONSERVER=\\\\DESKTOP-P2E0EQI" "LOCALAPPDATA=C:\\Users\\danie\\AppData\\Local" "HOMEPATH=\\Users\\danie" "HOMEDRIVE=C:" "HOME=C:\\Users\\danie" "FPS_BROWSER_USER_PROFILE_STRING=Default" "FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer" "DriverData=C:\\Windows\\System32\\Drivers\\DriverData" "ComSpec=C:\\Windows\\system32\\cmd.exe" "COMPUTERNAME=DESKTOP-P2E0EQI" "CommonProgramW6432=C:\\Program Files\\Common Files" "CommonProgramFiles(x86)=C:\\Program Files (x86)\\Common Files" "CommonProgramFiles=C:\\Program Files\\Common Files" "ChocolateyToolsLocation=C:\\tools" "ChocolateyLastPathUpdate=132194190041030257" "ChocolateyInstall=C:\\ProgramData\\chocolatey" "asl.log=Destination=file" "APPDATA=C:\\Users\\danie\\AppData\\Roaming" "ALLUSERSPROFILE=C:\\ProgramData") (display-type . color) (background-mode . dark) (cursor-color . "#f2777a") (fullscreen-restore) (frameset--id . "A530-AC00-F411-BC1C") (frameset--mini t . t) (width . 224) (modeline . t) (unsplittable) (left . 0) (top . 0) (icon-name) (display . "w32") (explicit-name) (tool-bar-position . top)) ((min-height . 4) (min-width . 10) (min-height-ignore . 3) (min-width-ignore . 3) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 132) (min-pixel-width . 170) (min-pixel-height-ignore . 99) (min-pixel-width-ignore . 51) (min-pixel-height-safe . 33) (min-pixel-width-safe . 34)) leaf (pixel-width . 3840) (pixel-height . 2127) (total-width . 225) (total-height . 64) (normal-height . 1.0) (normal-width . 1.0) (buffer "PlaceObjectOnPlane.cs" (selected . t) (hscroll . 0) (fringes 8 8 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 1236) (start . 332))) (((minibuffer . t) (foreground-color . "#a9b7c6") (background-color . "#2B2B2B") (display-type . mono) (background-mode . dark) (cursor-color . "#708183") (right-divider-width . 0) (bottom-divider-width . 0) (tool-bar-lines . 0) (menu-bar-lines . 0) (vertical-scroll-bars) (frameset--id . "D572-288F-AC15-7F91") (frameset--mini t) (font . "tty") (height . 11) (width . 10) (modeline . t) (unsplittable)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 10) (pixel-height . 10) (total-width . 10) (total-height . 10) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 145) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("c:/Users/danie/.emacs.d/" "c:/Workspace/Projects/unity-ar-toolkit/" "c:/Workspace/Projects/unity-ar-toolkit/Assets/ArToolkit/Scripts/PlaneManager.cs" "c:/Workspace/Projects/unity-ar-toolkit/Assets/ArToolkit/Scripts/PlaceObjectOnPlane.cs" "c:/Workspace/Projects/unity-ar-toolkit-project/unity-ar-toolkit/Assets/AR Toolkit/Editor/NodeEditorWindow.cs" "c:/Workspace/Projects/raster/build.bat" "c:/Workspace/Projects/raster/.projectile" "c:/Workspace/Projects/raster/.projectille" "c:/Users/danie/.emacs.d/init.el" "c:/Workspace/Projects/raster/src/win32_platform.c" "c:/Workspace/Projects/raster/src/raster.c" "c:/Workspace/Projects/raster/src/win32_plarform.h" "c:/Workspace/Projects/raster/src/win32_plarform.c" "c:/Workspace/Projects/raster/src/raster.h" "c:/Workspace/Tests/C/echo.c" "c:/Workspace/Tests/C/alloc.c" "c:/Workspace/Tests/C/pointers.c"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/unity-ar-toolkit/Assets/ArToolkit/Scripts/PlaceObjectOnPlane.cs"
+  "PlaceObjectOnPlane.cs"
+  'csharp-mode
+  '(eldoc-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode company-mode omnisharp-mode ivy-mode)
+  1236
+  '(1753 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24207 50980 84098 0) (buffer-file-coding-system . utf-8-with-signature-dos))
+  '((mark-ring (1445 2431 2385 2436 2275 2274 2223 2486 80 61 299 102 2050 2019 247 1236))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/unity-ar-toolkit-project/unity-ar-toolkit/Assets/AR Toolkit/Editor/NodeEditorWindow.cs"
+  "NodeEditorWindow.cs"
+  'csharp-mode
+  '(eldoc-mode magit-file-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode company-mode omnisharp-mode ivy-mode)
+  695
+  '(701 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24207 33418 425390 0) (buffer-file-coding-system . utf-8-with-signature-dos))
+  '((mark-ring (491 301 784 783 144 417 420 470 587 531 584 616 420 170 498 695))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/unity-ar-toolkit/Assets/ArToolkit/Scripts/PlaneManager.cs"
+  "PlaneManager.cs"
+  'csharp-mode
+  '(eldoc-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode company-mode omnisharp-mode ivy-mode)
+  266
+  '(181 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24207 49190 742011 0) (buffer-file-coding-system . utf-8-with-signature-dos))
+  '((mark-ring (483 398 299 179 300 79 837 225 535 718 928 266))))
+
+(desktop-create-buffer 208
+  "c:/Users/danie/Dropbox/notes/unity-ar+gps-location-project.org"
+  "unity-ar+gps-location-project.org"
+  'org-mode
+  '(projectile-mode editorconfig-mode override-global-mode ivy-mode)
+  11864
+  '(7320 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24205 4760 673427 0) (buffer-file-coding-system . undecided-dos) (truncate-lines . t))
+  '((mark-ring (11864))))
+
+(desktop-create-buffer 208
+  "c:/Users/danie/Dropbox/notes/unity-ar-toolkit-project.org"
+  "unity-ar-toolkit-project.org"
+  'org-mode
+  '(projectile-mode editorconfig-mode override-global-mode ivy-mode)
+  822
+  '(627 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24204 54825 97748 0) (buffer-file-coding-system . undecided-dos) (truncate-lines . t))
+  '((mark-ring (585))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/build.bat"
+  "build.bat"
+  'bat-mode
+  '(projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  116
+  '(122 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24204 54825 757813 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring (16 91 16 122))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/src/win32_platform.c"
+  "win32_platform.c"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  957
+  '(330 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24202 2237 327589 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring (1 1388 322 273 268 1390 1545 1633 326 1322 1650 1227 453 992 949 156))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/src/raster.h"
+  "raster.h"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  92
+  '(101 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24202 2237 327588 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring (101))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/src/win32_platform.h"
+  "win32_platform.h"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  67
+  '(67 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 57586 892335 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/.projectile"
+  ".projectile"
+  'fundamental-mode
+  '(projectile-mode editorconfig-mode override-global-mode ivy-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 57549 619456 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/.projectille"
+  ".projectille"
+  'fundamental-mode
+  '(projectile-mode editorconfig-mode override-global-mode ivy-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 57558 243803 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Projects/raster/src/raster.c"
+  "raster.c"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  76
+  '(76 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 57397 764162 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Tests/C/echo.c"
+  "echo.c"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  99
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 1864 200807 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Tests/C/alloc.c"
+  "alloc.c"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  857
+  '(336 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24201 1861 709584 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring (81 146 278 780 338 359 883 883 883 883 883 883 883 684 684 576))))
+
+(desktop-create-buffer 208
+  "c:/Workspace/Tests/C/pointers.c"
+  "pointers.c"
+  'c-mode
+  '(abbrev-mode projectile-mode hl-todo-mode editorconfig-mode override-global-mode ivy-mode)
+  74
+  '(71 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode . t) (buffer-display-time 24200 60002 761159 0) (buffer-file-coding-system . undecided-dos))
+  '((mark-ring (38 74))))
+
