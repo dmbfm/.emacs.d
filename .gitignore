@@ -12,3 +12,5 @@ custom.el
 vars.el
 projectile.cache*
 recentf*
+elpa/archives/melpa/archive-contents
+elpa/archives/gnu/archive-contents

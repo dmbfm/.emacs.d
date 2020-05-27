@@ -53,7 +53,8 @@
 (editorconfig-mode t)
 (global-hl-line-mode t)
 ;; (load-theme 'leuven t)
-(load-theme 'sanityinc-tomorrow-eighties)
+;; (load-theme 'sanityinc-tomorrow-eighties)
+(load-theme 'gruvbox)
 
 (setq-default fill-column 90)
 ;; (add-hook 'text-mode-hook (lambda () (hl-todo-mode t)))
@@ -427,3 +428,5 @@
 (defun my-c-mode-hook ()
   (c-set-offset 'case-label '+))
 (add-hook 'c-mode-common-hook 'my-c-mode-hook)
+
+(setq inhibit-compacting-font-caches t)
